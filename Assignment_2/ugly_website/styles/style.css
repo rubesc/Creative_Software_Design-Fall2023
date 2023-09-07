@@ -1,0 +1,43 @@
+body {
+  color: rgb(143, 47, 47);
+  /* background-image: radial-gradient(circle, red 30%,green 2 50%, blue 3 20%) */
+}
+
+h1 {
+  color: Black;
+  font-family: monospace;
+}
+
+
+h2 {
+  color: rgb(94, 179, 188);
+  font-family: monospace;
+}
+
+.row.first{
+  display: inline-block;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+}
+
+.rows.second{
+  display: inline-block;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+}
+
+.row.third{
+  display: inline-block;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+}
+
+.row.fourth{
+  display: inline-block;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+}
