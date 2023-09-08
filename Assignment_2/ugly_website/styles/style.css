@@ -1,43 +1,37 @@
 body {
-  color: rgb(143, 47, 47);
-  /* background-image: radial-gradient(circle, red 30%,green 2 50%, blue 3 20%) */
+  background-color:rgb(0,0,0);
+  background-image:url(http://www.zingerbugimages.com/backgrounds/red_yellow_and_green_stars.gif);
+  background-position:top left;
+  background-repeat:repeat;
+  background-attachment:fixed;
+  color: orangered;
+  font-family: "Trattatello";
+  /* background: -moz-linear-gradient(left,  rgba(255,255,255,1) 0%, rgba(108,211,229,0.2) 40%, rgba(108,211,229,0.2) 60%, rgba(255,255,255,1) 100%); */
+  /* background: linear-gradient(to right,  gold 0%,orange 40%,green 60%, LightBlue 100%); */
 }
 
 h1 {
-  color: Black;
-  font-family: monospace;
+  color: whitesmoke;
+  font-family: "Snell Roundhand";
 }
-
 
 h2 {
-  color: rgb(94, 179, 188);
-  font-family: monospace;
+  color: rgb(111, 201, 211);
+  font-family: "Trattatello";
+  
+}
+.grid-container{
+  display: grid;
+  grid-template-columns: 25% 20% 25% 30% auto 40px; auto auto auto auto
+  /* background: -webkit-linear-gradient(left,  rgba(255,255,255,1) 0%,rgba(108,211,229,0.2) 40%,rgba(108,211,229,0.2) 60%,rgba(255,255,255,1) 100%);  */
 }
 
-.row.first{
-  display: inline-block;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-}
 
-.rows.second{
+.grid-cell{
   display: inline-block;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-}
-
-.row.third{
-  display: inline-block;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-}
-
-.row.fourth{
-  display: inline-block;
-  position: fixed;
-  top: 50%;
-  left: 50%;
+  background: LightBlue;
+  border: 1px solid aquamarine;
+  padding: 10px;
+  background: linear-gradient(to right,  gold 0%,orange 40%,green 60%, LightBlue 100%);
+  
 }
