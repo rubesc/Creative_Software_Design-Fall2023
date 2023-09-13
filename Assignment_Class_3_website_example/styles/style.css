@@ -1,0 +1,39 @@
+html{
+  height: 100%;
+  width: 100%
+}
+
+
+
+body {
+  color: rgb(143, 47, 47);
+  height: 100%;
+  width: 100%
+}
+
+h1 {
+  color: Black;
+  font-family: monospace;
+}
+
+
+h2 {
+  color: rgb(94, 179, 188);
+  font-family: monospace;
+}
+
+.outer-cont {
+  height: 50%;
+  width: 50%;
+  display: flex;
+  background-color: grey;
+  flex-wrap: wrap;
+}
+
+.inner-cont {
+  height: 50%;
+  width: 50%;
+  display: flex;
+  background-color: black;
+  flex-wrap: wrap;
+}
