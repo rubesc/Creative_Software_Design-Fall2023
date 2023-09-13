@@ -3,8 +3,6 @@ html{
   width: 100%
 }
 
-
-
 body {
   color: rgb(143, 47, 47);
   height: 100%;
@@ -25,15 +23,13 @@ h2 {
 .outer-cont {
   height: 50%;
   width: 50%;
-  display: flex;
   background-color: grey;
-  flex-wrap: wrap;
 }
 
 .inner-cont {
-  height: 50%;
+  /* 50% of the screen */
+  height: 50vh;  
+  /* height: 50%;   */
   width: 50%;
-  display: flex;
   background-color: black;
-  flex-wrap: wrap;
 }
