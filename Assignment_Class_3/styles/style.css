@@ -1,0 +1,33 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+
+.outer-cont {
+  /* background: lightgray; */
+  height: 100%;
+	width: 100%;
+  display: flex;
+  flex-direction: row; 
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black 
+}
+
+.square {
+  /* background: black; */
+  width: 80%;
+  height: 80%;
+  margin: 20px;
+  border: 1px solid black 
+}
