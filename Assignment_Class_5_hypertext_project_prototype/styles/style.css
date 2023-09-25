@@ -1,3 +1,6 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+
 * {
   box-sizing: border-box;
 }
@@ -14,13 +17,41 @@ body {
   
 }
 
+h2{
+  font-size: 1.2em;
+  margin-top: 0.67em;
+  margin-bottom: 0.67em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: lighter; 
+}
+
+
+h5{
+  font-size: 0.4em;
+  margin-top: 0.67em;
+  margin-bottom: 0.67em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: normal;
+}
+
+h6{
+  font-size: 1em;
+  margin-top: 0.67em;
+  margin-bottom: 0.67em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: normal;  
+}
+
 .title-cont {
-  height: 40px;
+  height: 100px;
   display: flex;
   flex-direction: column; 
   justify-content: center;
   align-items: left;
-  margin: 100px;
+  margin: 30px;
 }
 
 .outer-cont {
@@ -29,7 +60,7 @@ body {
   flex-direction: column; 
   justify-content: top;
   align-items: left;
-  margin: 10px;
+  margin: 30px;
 }
 
 .card-row-one-cont {
@@ -39,8 +70,39 @@ body {
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
+  margin: 30px;
+  /* background-color: #000; */
+}
 
+.img {
+  border-radius: 8px;
+  max-width: 100%;
+  height: auto;
+  /* height: 100px; */
 }
 
 
+.poem {
+  position: relative;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  font-size: 1em;
+  letter-spacing: 4px;
+  overflow: hidden;
+  background: linear-gradient(90deg, #000, #a52727, #000);
+  background-repeat: no-repeat;
+  background-size: 80%;
+  animation: animate 7s linear infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0);
+}
 
+
+@keyframes animate {
+  0% {
+    background-position: -500%;
+  }
+  100% {
+    background-position: 500%;
+  }
+}
