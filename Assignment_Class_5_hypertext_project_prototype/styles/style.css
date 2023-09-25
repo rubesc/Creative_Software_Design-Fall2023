@@ -1,0 +1,46 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  width: 100%;
+  display: flex;
+  font-family: 'Inter';
+  
+}
+
+.title-cont {
+  height: 40px;
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  align-items: left;
+  margin: 100px;
+}
+
+.outer-cont {
+	width: 1300px;
+  display: flex;
+  flex-direction: column; 
+  justify-content: top;
+  align-items: left;
+  margin: 10px;
+}
+
+.card-row-one-cont {
+  display: flex;
+  flex-direction: row; 
+  justify-content: flex-start;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+}
+
+
+
