@@ -14,14 +14,11 @@ x.classList.remove('btn')
 x.classList.add('testing'); 
 
 
-// x.innerHTML = '<p> the first row </p> <p> the second row </p>'
+x.innerHTML = '<p> the first row </p> <p> the second row </p>'
 // x.innerText = 'wow my first real javascript element'
 // x.style.color = 'red'
 // x.style['transform'] = 'skew(50deg)'
 
-
-div.innerText = 'dude whats up';
-document.querySelector('h1').innerText = 'this is now an official header'
 
 // Add new element to "container "
 document.querySelector('.container').appendChild(x);
