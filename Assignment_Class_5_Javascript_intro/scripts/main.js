@@ -1,28 +1,28 @@
+// function addNumbers(a,b,c) {
+//     return a + b + c
+// }
 
+// let result = addNumbers(4,1,12);
+// console.log('the add numbers result is' , result)
 
-// newdiv = document.createElement('div');
-// document.querySelector('body').appendChild(newdiv);
-// console.log('HI IM WORKING');
+function makeElement(a) {
 
-// const obj = { name: 'omar' };
+    // Create a new paragraph element
+    let newParagraph = document.createElement("p")
 
+    newParagraph.innerHTML = "This is the text element #" + a;
 
-// create a new element 
-let x = document.createElement('div') ; // create element
-x.classList.add('btn'); // add class to element
-x.classList.remove('btn')
-x.classList.add('testing'); 
+    // Add a class to the new paragraph
+    newParagraph.classList.add("new-text-element");
 
+    let container = document.querySelector(".container");
 
-x.innerHTML = '<p> the first row </p> <p> the second row </p>'
-// x.innerText = 'wow my first real javascript element'
-// x.style.color = 'red'
-// x.style['transform'] = 'skew(50deg)'
+    container.appendChild(newParagraph);
 
+}
 
-// Add new element to "container "
-document.querySelector('.container').appendChild(x);
+makeElement(1)
+makeElement(2)
+makeElement(200)
+makeElement(2000000)
 
-
-console.log(x)
-console.log(document.querySelector('.container'))
