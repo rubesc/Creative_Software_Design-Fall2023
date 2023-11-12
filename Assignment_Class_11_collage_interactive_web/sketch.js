@@ -58,8 +58,18 @@ document.addEventListener('DOMContentLoaded', function () {
     
     // Add click event listener to remove the image
     newImg.addEventListener('click', function () {
-    this.remove();
-     });
+
+      // Flash the background in black
+      document.body.style.backgroundColor = 'grey';
+
+      // Reset the background after a short delay (adjust the duration as needed)
+      setTimeout(function () {
+        document.body.style.backgroundColor = '';
+      }, 150);
+      
+      // Remove the image
+      this.remove();
+      });
       
   })
 
