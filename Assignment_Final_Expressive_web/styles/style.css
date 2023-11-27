@@ -1,161 +1,121 @@
-@import url(https://fonts.googleapis.com/css?family=Montserrat);
-
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
 
 * {
   box-sizing: border-box;
 }
 
-html {
+html, body {
   height: 100%;
-  width: 100%;
+  margin: 60;
 }
 
 body {
   width: 100%;
   display: flex;
-  font-family: 'Inter';
-  
+  font-family: 'Montserrat', sans-serif;
+  overflow-x: hidden; /* Prevent horizontal scrollbar */
 }
 
-h2{
-  font-size: 1.2em;
-  margin-top: 0.67em;
-  margin-bottom: 0.67em;
-  margin-left: 0;
-  margin-right: 0;
-  font-weight: lighter; 
+h2, h5, h6 {
+  margin: 0.67em 0;
+  font-weight: lighter;
 }
 
-
-h5{
-  font-size: 0.85em;
-  margin-top: 0.67em;
-  margin-bottom: 0.67em;
-  margin-left: 0;
-  margin-right: 0;
-  font-weight: normal;
-}
-
-h6{
-  font-size: 1em;
-  margin-top: 0.67em;
-  margin-bottom: 0.67em;
-  margin-left: 0;
-  margin-right: 0;
-  font-weight: normal;  
-}
-
-
-.header-cont{
-  height: 100px;
+.header-cont {
   display: flex;
   flex-direction: row; 
   justify-content: space-between;
-  align-items: left;
-  /* margin: 30px; */
+  align-items: center;
+  height: 100vh; /* Set the height to 100% of the viewport height */
+  padding: 20px; 
+  margin: 40;
 }
 
-.title-cont {
-  height: 100px;
+.title-cont, .menu-cont {
   display: flex;
   flex-direction: column; 
   justify-content: center;
   align-items: left;
-  /* margin: 30px; */
-}
-
-.menu-cont {
-  height: 100px;
-  display: flex;
-  flex-direction: column; 
-  justify-content: top;
-  align-items: right;
-  margin: 30px;
-  /* padding: 30px; */
+  margin-right: 40px; /* Add right margin for cushion */
 }
 
 .outer-cont {
-	width: 1300px;
-  display: flex;
-  flex-direction: column; 
-  justify-content: top;
-  align-items: left;
-  margin: 30px;
+  max-width: 1300px;
+  margin: 30px auto; /* Center the container */
+  padding: 40px; /* Add left and right padding for cushion */
 }
 
 .card-row-one-cont {
   display: flex;
-  flex-direction: row; 
-  justify-content: flex-start;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   flex-wrap: wrap;
-  margin: 30px;
-  /* background-color: #000; */
+  margin: 30px; 
 }
 
-.img {
-  border-radius: 8px;
-  max-width: 100%;
-  height: auto;
-  margin: 20px;
-  /* height: 100px; */
-  /* border-radius: 1500px; */
-  /* background-color: #ccc; */
-  /* animation: glow 3s infinite alternate; */
+/* Additional CSS for hiding the images initially */
+.image {
+  opacity: 0;
+  transition: opacity 1s ease-in-out; /* Adjust the duration and easing function */
+  margin-bottom: 100vh; /* Add space between each image */
 }
 
-/* 
-@keyframes glow {
-  from {
-    box-shadow: 0 0 10px -10px hwb(0 16% 21%);
-  }
-  to {
-    box-shadow: 0 0 10px 10px #ff0000;
-  }
-} */
+.image.visible {
+  opacity: 1;
+}
+
+/* Updated CSS for .gradient class */
+.image.gradient {
+  /* position: fixed; */
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 20vh; /* Remove space at the bottom for full-page gradient images */
+}
+
+.image-gradient img {
+  /* ... */
+  mix-blend-mode: multiply;
+}
+
+/* Style for other images */
+.image:not(.gradient) {
+  margin-bottom: 20vh; /* Add space between each non-gradient image */
+}
 
 
 
 .poem {
   position: relative;
-  font-family: sans-serif;
   text-transform: uppercase;
   font-size: 1em;
   letter-spacing: 4px;
   overflow: hidden;
-  /* background: linear-gradient(90deg, #000, #a52727, #000); */
-  /* background-repeat: no-repeat; */
-  /* background-size: 80%; */
-  /* animation: animate 7s linear infinite; */
-  /* -webkit-background-clip: text; */
-  /* -webkit-text-fill-color: rgba(255, 255, 255, 0); */
+  /* margin-bottom: 20px; Add bottom margin for cushion */
+  opacity: 0; /* Set initial opacity to 0 */
+  transform: translateX(-100%); /* Move the text outside of the screen to the left */
+  transition: opacity 4s ease-in-out, transform 4s ease-in-out; /* Add transitions */
 }
 
-/* 
-@keyframes animate {
-  0% {
-    background-position: -500%;
-  }
-  100% {
-    background-position: 500%;
-  }
-} */
-
-
-/* .exit-image {
-  /* width: 200px;
-  height: 200px; */
-  /* border-radius: 1500px;
-  background-color: #ccc;
-  animation: glow 3s infinite alternate;
+.poem.visible {
+  opacity: 1;
+  transform: translateX(0); /* Move the text back to its original position */
 }
 
-@keyframes glow {
-  from {
-    box-shadow: 0 0 50px -50px hwb(188 31% 11%);
-  }
-  to {
-    box-shadow: 0 0 60px 0px hwb(17 31% 11%);
-  }
-} */ 
+.poemtext {
+  position: relative;
+  text-transform: uppercase;
+  font-size: 1em;
+  letter-spacing: 4px;
+  overflow: hidden;
+  margin-bottom: 20px; /* Add bottom margin for cushion */
+  opacity: 0; /* Set initial opacity to 0 */
+  transform: translateX(-100%); /* Move the text outside of the screen to the left */
+  transition: opacity 6s ease-in-out, transform 6s ease-in-out; /* Add transitions */
+}
+
+.poemtext.visible {
+  opacity: 1;
+  transform: translateX(0); /* Move the text back to its original position */
+}
+ 
