@@ -1,4 +1,4 @@
-// Additional JavaScript to add/remove the 'visible' class to the images and poems when the user scrolls
+// Add/remove the 'visible' class to the images and poems when the user scrolls
 function handleScroll() {
     const images = document.querySelectorAll('.image');
     const poems = document.querySelectorAll('.poem');
@@ -36,3 +36,19 @@ window.addEventListener('scroll', handleScroll);
 
 // Initialize positions when the page loads
 window.addEventListener('load', handleScroll);
+
+
+ // Add click event listener to remove the image
+ newImg.addEventListener('click', function () {
+
+    // Flash the background in black
+    document.body.style.backgroundColor = 'grey';
+
+    // Reset the background after a short delay (adjust the duration as needed)
+    setTimeout(function () {
+      document.body.style.backgroundColor = '';
+    }, 150);
+    
+    // Remove the image
+    this.remove();
+    });
