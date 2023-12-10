@@ -52,3 +52,23 @@ window.addEventListener('load', handleScroll);
     // Remove the image
     this.remove();
     });
+
+
+    function makeBlackAndWhite(element) {
+        element.style.filter = "grayscale(100%)";
+      }
+      
+      function resetImage(element) {
+        element.style.filter = "grayscale(0%)"; // Reset to color
+      }
+      
+      // Attach event listeners to the image
+      const imageElement = document.querySelector('.image');
+      
+      imageElement.addEventListener('mouseover', function() {
+        makeBlackAndWhite(this);
+      });
+      
+      imageElement.addEventListener('mouseout', function() {
+        resetImage(this);
+      });

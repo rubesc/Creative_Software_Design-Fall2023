@@ -180,3 +180,8 @@ h2, h5, h6 {
     transform: translateY(-15px);
   }
 }
+
+
+.image:hover {
+  filter: grayscale(100%);
+}
